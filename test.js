@@ -7,8 +7,6 @@ const {
     until
 } = require('selenium-webdriver');
 
-
-
 describe('Login error message', function () {
     let driver;
 
@@ -16,7 +14,7 @@ describe('Login error message', function () {
         driver = await new Builder().forBrowser('chrome').build();
     });
 
-    it('message should be present: "The user or password is incorrect."', async function () {
+    it('message should be present: "The user or password is incorrect."', async () => {
         try {
             await driver.get('https://uat.ormuco.com/login');
             await driver.sleep(5000);
